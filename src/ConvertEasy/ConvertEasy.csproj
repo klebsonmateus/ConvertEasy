@@ -5,7 +5,7 @@
     <UseWPF>true</UseWPF>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <AssemblyName>ConversorHolyrics</AssemblyName>
-    <RootNamespace>ConversorHolyrics</RootNamespace>
+    <AssemblyName>ConvertEasy</AssemblyName>
+    <RootNamespace>ConvertEasy</RootNamespace>
   </PropertyGroup>
 </Project>

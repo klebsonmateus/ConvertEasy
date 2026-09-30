@@ -1,6 +1,6 @@
 using System.Windows;
 
-namespace ConversorHolyrics;
+namespace ConvertEasy;
 
 public partial class App : Application
 {
