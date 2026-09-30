@@ -1,0 +1,87 @@
+<Window x:Class="ConversorHolyrics.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Conversor Holyrics" Width="760" Height="600" MinWidth="620" MinHeight="600"
+        WindowStartupLocation="CenterScreen" Background="#F5F8FC">
+    <Grid Margin="32">
+        <Border Background="White" CornerRadius="18" Padding="38" BorderBrush="{StaticResource BorderBrush}" BorderThickness="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <StackPanel>
+                    <TextBlock Text="Conversor Holyrics" FontSize="30" FontWeight="Bold" Foreground="{StaticResource InkBrush}" />
+                    <TextBlock Text="Prepare seus arquivos para usar no Holyrics" FontSize="16"
+                               Foreground="{StaticResource MutedBrush}" Margin="0,8,0,0" />
+                </StackPanel>
+
+                <Grid x:Name="HomePanel" Grid.Row="1" Margin="0,40,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="16" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Button Grid.Row="0" Click="VideoOption_Click" Cursor="Hand" Background="#EFF6FC"
+                            BorderBrush="{StaticResource BorderBrush}" BorderThickness="1" Padding="24"
+                            HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center">
+                        <StackPanel>
+                            <TextBlock Text="Vídeo" FontSize="23" FontWeight="SemiBold" Foreground="{StaticResource InkBrush}" />
+                            <TextBlock Text="Converter vídeo para um formato compatível" FontSize="15"
+                                       Foreground="{StaticResource MutedBrush}" Margin="0,8,0,0" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button Grid.Row="2" Click="PdfOption_Click" Cursor="Hand" Background="#EFF6FC"
+                            BorderBrush="{StaticResource BorderBrush}" BorderThickness="1" Padding="24"
+                            HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center">
+                        <StackPanel>
+                            <TextBlock Text="PDF" FontSize="23" FontWeight="SemiBold" Foreground="{StaticResource InkBrush}" />
+                            <TextBlock Text="Transformar cada página em uma imagem" FontSize="15"
+                                       Foreground="{StaticResource MutedBrush}" Margin="0,8,0,0" TextWrapping="Wrap" />
+                        </StackPanel>
+                    </Button>
+                </Grid>
+
+                <Grid x:Name="SelectionPanel" Grid.Row="1" Margin="0,36,0,0" Visibility="Collapsed">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock x:Name="SectionTitle" FontSize="24" FontWeight="SemiBold" Foreground="{StaticResource InkBrush}" />
+                    <Button x:Name="SelectFileButton" Grid.Row="1" Content="Selecionar vídeo"
+                            Style="{StaticResource PrimaryButton}" HorizontalAlignment="Left"
+                            Margin="0,22,0,20" Click="SelectFile_Click" />
+
+                    <Border Grid.Row="2" Background="#F7FAFD" BorderBrush="{StaticResource BorderBrush}"
+                            BorderThickness="1" CornerRadius="10" Padding="20" MinHeight="140">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" MaxWidth="540">
+                            <TextBlock Text="Arquivo selecionado" FontSize="14" FontWeight="SemiBold"
+                                       Foreground="{StaticResource MutedBrush}" HorizontalAlignment="Center" />
+                            <TextBlock x:Name="SelectedFileText" Text="Nenhum arquivo selecionado"
+                                       FontSize="17" Foreground="{StaticResource InkBrush}" Margin="0,10,0,0"
+                                       TextWrapping="Wrap" TextAlignment="Center" />
+                            <TextBlock Text="Em breve, você também poderá arrastar arquivos para esta área."
+                                       FontSize="13" Foreground="{StaticResource MutedBrush}" Margin="0,18,0,0"
+                                       TextWrapping="Wrap" TextAlignment="Center" />
+                        </StackPanel>
+                    </Border>
+
+                    <StackPanel Grid.Row="3" Margin="0,22,0,0">
+                        <TextBlock Text="A conversão estará disponível em uma próxima versão."
+                                   Foreground="{StaticResource MutedBrush}" FontSize="13" Margin="0,0,0,16" />
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="Voltar" Style="{StaticResource SecondaryButton}" Click="Back_Click" Margin="0,0,12,0" />
+                            <Button Content="Converter" Style="{StaticResource PrimaryButton}" IsEnabled="False" />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

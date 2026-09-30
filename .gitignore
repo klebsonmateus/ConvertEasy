@@ -1,0 +1,19 @@
+# Visual Studio and .NET build output
+.vs/
+.vscode/
+**/bin/
+**/obj/
+TestResults/
+*.user
+*.suo
+*.rsuser
+*.userosscache
+*.sln.docstates
+
+# Local publish output
+publish/
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
